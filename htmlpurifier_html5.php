@@ -19,8 +19,7 @@
 
 require_once('HTMLPurifier.safe-includes.php');
 
-
-function load_htmlpurifier($allowed, $config) {
+function load_htmlpurifier($config) {
 
   $config->set('HTML.Doctype', 'HTML 4.01 Transitional');
   $config->set('CSS.AllowTricky', true);
@@ -31,8 +30,6 @@ function load_htmlpurifier($allowed, $config) {
   // o Vimeo.com
   $config->set('HTML.SafeIframe', true);
   $config->set('URI.SafeIframeRegexp', '%^(http:|https:)?//(www.youtube(?:-nocookie)?.com/embed/|player.vimeo.com/video/)%');
-
-  $config->set('HTML.Allowed', implode(',', $allowed));
 
   // Set some HTML5 properties
   $config->set('HTML.DefinitionID', 'html5-definitions'); // unqiue id
