@@ -11,21 +11,20 @@ Load HTMLPurifier with support for:
 How to use
 ======================
 
-If you already have a GIT repo for your server, then:
+This is a fork of https://github.com/kennberg/php-htmlpurfier-html5
 
-    git submodule add https://github.com/kennberg/php-htmlpurifier-html5 php-htmlpurifier-html5
-    git submodule init
+All credit goes to the author Alex Kennberg (http://www.kennberg.com)
 
-Or, for installation inside your server directory:
+This particular version has been produced to allow integration with the Drupal htmlpurifier module:
 
-    git clone https://github.com/kennberg/php-htmlpurifier-html5
+https://www.drupal.org/project/htmlpurifier
 
-Finally, view the example.php file to see how it works.
-
-Make sure you define LIB\_DIR so HTML purifier can be loaded. With default LIB\_DIR path is: ROOT/lib/third-party/htmlpurifier/. See example.php to how to set this up.
+To use, place the contents of this repo in /sites/all/libraries/htmlpurifier_html5 in your Drupal codebase.
 
 More info
 ======================
+
+Drupal Module: https://www.drupal.org/project/htmlpurifier
 
 HTMLPurifier: http://htmlpurifier.org/
 

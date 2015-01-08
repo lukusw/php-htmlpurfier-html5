@@ -17,11 +17,11 @@
  * limitations under the License.
  */
 
-require_once(LIB_DIR . 'third-party/htmlpurifier/HTMLPurifier.safe-includes.php');
+require_once('HTMLPurifier.safe-includes.php');
 
 
-function load_htmlpurifier($allowed) {
-  $config = HTMLPurifier_Config::createDefault();
+function load_htmlpurifier($allowed, $config) {
+
   $config->set('HTML.Doctype', 'HTML 4.01 Transitional');
   $config->set('CSS.AllowTricky', true);
   $config->set('Cache.SerializerPath', '/tmp');
